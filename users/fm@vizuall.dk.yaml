@@ -1,0 +1,11 @@
+name: 'Flemming Meyer'
+super: true
+id: 4df4b14e-e243-4fe9-abea-451d8cbfd523
+password_hash: $2y$12$D6Tqg5bYDIuA0WinQwNhnOTKYRkxMPLdvo5bFi3612uSV9TqlsRNe
+preferences:
+  collections:
+    pages:
+      view: tree
+      after_save: continue_editing
+    cars:
+      view: list

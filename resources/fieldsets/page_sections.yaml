@@ -1,0 +1,27 @@
+title: 'Page sections'
+fields:
+  -
+    handle: page_sections
+    field:
+      type: replicator
+      display: 'Page sections'
+      sets:
+        items:
+          display: Items
+          sets:
+            intro:
+              display: Intro
+              fields:
+                - import: intro
+            benefits:
+              display: Benefits
+              fields:
+                - import: benefits
+            seo_text:
+              display: 'Seo text'
+              fields:
+                - import: seo_text
+            featured_cars:
+              display: 'Featured cars'
+              fields:
+                - import: featured_cars

@@ -1,0 +1,14 @@
+title: 'Featured cars'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: list
+    field:
+      collections:
+        - cars
+      type: entries
+      display: List

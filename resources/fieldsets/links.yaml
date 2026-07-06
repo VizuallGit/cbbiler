@@ -1,0 +1,19 @@
+title: Links
+fields:
+  -
+    handle: links
+    field:
+      max_rows: 2
+      type: grid
+      display: Links
+      fields:
+        -
+          handle: url
+          field:
+            type: link
+            display: Url
+        -
+          handle: text
+          field:
+            type: text
+            display: Text

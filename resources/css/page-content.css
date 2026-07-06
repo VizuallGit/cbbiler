@@ -1,0 +1,59 @@
+.page-content {
+    line-height: var(--leading-loos);
+  
+    blockquote {
+      border-inline-start: .5rem solid var(--color-primary-glare);
+      padding-inline: 2em;
+      padding-block: 2em;
+      font-weight: 700;
+      font-size: var(--size-300);
+      line-height: var(--leading-normal);
+    }
+
+    p{
+      --flow-space: 1em;
+    }
+
+    hr{
+      margin-block: 2em !important;
+    }
+
+    h1{
+      font-size: var(--size-650);
+      max-width: 35ch;
+    }
+  
+    h2 {
+      font-size: var(--size-500);
+      max-width: 55ch;
+    }
+  
+    h3 {
+      font-size: var(--size-400);
+      max-width: 65ch;
+    }
+  
+    ol:not([class]),
+    ul:not([class]) {
+      padding-inline-start: 2.5em;
+      list-style: disc;
+    }
+  
+    ul:not([class]) li:not([class]) + li:not([class]) {
+      margin-top: .4em;
+    }
+  
+    h2,
+    h3 {
+      --flow-space: 2em;
+    }
+
+    h1 + *{
+      --flow-space: 1.8em;
+    }
+
+    h2 + *,
+    h3 + * {
+      --flow-space: 1em;
+    }
+  }

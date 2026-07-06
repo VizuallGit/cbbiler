@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "Rajdhani";
+  src: url("/public/fonts/Rajdhani-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rajdhani";
+  src: url("/public/fonts/Rajdhani-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
+  text-wrap: balance;
+  font-family: var(--font-heading);
+  line-height: 1.1;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+  
+h1,
+.h1 {
+  font-size: var(--size-850);
+  max-width: 30ch;
+}
+
+h2,
+.h2 {
+  font-size: var(--size-700);
+  max-width: 40ch;
+}
+
+h3,
+.h3 {
+  font-size: var(--size-550);
+  max-width: 55ch;
+}
+
+h4,
+.h4 {
+  font-size: var(--size-300);
+}
+
+h5,
+.h5 {
+  font-size: var(--size-200);
+}
+
+h6,
+.h6 {
+  font-size: var(--size-200);
+}
+
+p{
+  text-wrap: pretty;
+}
+
+.title{
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+.title + h1, .title + h2, .title + h3 {
+  --flow-space: .5em;
+}
+
+.text-large{
+  font-size: calc(1rem + 1px);
+  font-weight: 600;
+  line-height: var(--leading-relax);
+}
+
+p a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: 600;
+}

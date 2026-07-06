@@ -1,0 +1,11 @@
+{{ if links }}
+    <div class="inline-flex flex-wrap flex-wrap gap-100 {{ space ?? 'flow-space-600' }}">
+        {{ links }}
+            {{ _color = switch(
+                (first) => 'bg-primary text-dark',
+                (last) => 'ring ring-inset ring-light-glare',
+            ) }}
+            {{ partial:components/btn class="{_color}" }}
+        {{ /links }}
+    </div>
+{{ endif }}

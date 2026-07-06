@@ -1,0 +1,15 @@
+<section class="wrapper py-lg space-y-800">
+    {{ partial:components/section_heading }}
+    <ul class="grid md:grid-cols-4 gap-800">
+        {{ list }}
+            <li class="space-y-100">
+                {{ if icon_type == "iconify" }}
+                    {{ iconify:iconify class="h-800 w-auto" }}
+                {{ else }}
+                    {{ svg src="icons/{local_icon}" class="h-800 w-auto max-w-850" preserveAspectRatio="xMidYMax meet" }}
+                {{ endif }}
+                <p class="font-medium">{{ text }}</p>
+            </li>
+        {{ /list }}
+    </ul>
+</section>

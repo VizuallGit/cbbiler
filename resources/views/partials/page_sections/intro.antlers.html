@@ -1,0 +1,28 @@
+<section class="bg-linear-90 from-dark to-dark-glare bg-cover bg-center text-light-glare"{{ if bg_image }} style="background-image: linear-gradient(90deg, var(--color-dark), color-mix(in oklab, var(--color-dark) 95%, transparent), var(--color-dark-glare)), url('{{ glide:bg_image width='1200' format='webp' quality='20' }}')"{{ /if }}>
+    <div class="wrapper grid md:grid-cols-[1fr_.8fr] gap-x-lg items-end">
+        <div class="flow-y py-xl prose-p:opacity-70 prose-p:text-300 prose-p:max-w-[55ch]">
+            {{ text }}
+            {{ partial:components/btn_group space="flow-space-700" }}
+            <ul class="flex gap-600 items-center flow-space-800">
+                {{ stats }}
+                    <li class="leading-none not-last-of-type:border-r not-last-of-type:border-white/15 pr-600 flex flex-col space-y-0.5">
+                        <b class="font-heading text-650">{{ number }}</b>
+                        <span class="text-xs opacity-60">{{ title }}</span>
+                    </li>
+                {{ /stats }}
+                <li>
+                    {{ svg src="trustpilot-logo" class="h-700 w-auto" }}
+                </li>
+            </ul>
+        </div>
+        <div class="">
+            {{ glide :src="image" width="500" format="webp" quality="70" }}
+                <img class="w-auto h-full object-cover" src="{{ url }}" width="{{ width }}" height="{{ height }}">
+            {{ /glide }}
+        </div>
+    </div>
+</section>
+
+
+
+

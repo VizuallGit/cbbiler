@@ -1,0 +1,42 @@
+title: Benefits
+fields:
+  - handle: section_headline
+    field: common_fields.section_headline
+  -
+    handle: list
+    field:
+      type: grid
+      display: List
+      fields:
+        -
+          handle: icon_type
+          field:
+            options:
+              - key: local
+                value: Local
+              - key: iconify
+                value: Iconify
+            default: local
+            type: button_group
+            display: 'Icon type'
+        -
+          handle: iconify
+          field:
+            store_as: svg_data
+            type: iconify
+            display: Iconify
+            if:
+              icon_type: 'equals iconify'
+        -
+          handle: local_icon
+          field:
+            path: svg/icons
+            type: iconamic
+            display: 'Local icon'
+            if:
+              icon_type: 'equals local'
+        -
+          handle: text
+          field:
+            type: text
+            display: Text

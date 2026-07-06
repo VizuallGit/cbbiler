@@ -1,0 +1,45 @@
+title: 'Common fields'
+fields:
+  -
+    handle: simple_text
+    field:
+      buttons:
+        - bold
+        - italic
+        - removeformat
+        - anchor
+      toolbar_mode: floating
+      remove_empty_nodes: false
+      type: bard
+      display: 'Simple text'
+  -
+    handle: section_headline
+    field:
+      buttons:
+        - h2
+        - bold
+        - italic
+        - removeformat
+        - Title
+      remove_empty_nodes: false
+      type: bard
+      display: 'Section headline'
+      container: assets
+  -
+    handle: richtext
+    field:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - color
+      container: assets
+      remove_empty_nodes: false
+      type: bard
+      display: Richtext

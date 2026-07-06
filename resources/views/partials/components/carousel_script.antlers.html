@@ -1,0 +1,74 @@
+{{ script_push }}
+    <script>
+        (function () {
+            const section = document.getElementById('id-{{ id }}');
+            const carousel = section?.querySelector('.carousel');
+            if (!carousel) return;
+
+            window.__carousels = window.__carousels || {};
+            window.__carousels['{{ id }}']?.();
+
+            const prevBtn = section.querySelector('[data-carousel-nav] [data-dir="-1"]');
+            const nextBtn = section.querySelector('[data-carousel-nav] [data-dir="1"]');
+
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+            const autoScroll = {{ auto_scroll ? 'true' : 'false' }};
+            const interval = {{ scroll_speed ?? '6000' }};
+            const controller = new AbortController();
+            const { signal } = controller;
+            let timer = null;
+            let hovered = false;
+
+            function cardStep() {
+                const item = carousel.querySelector(':scope > li');
+                if (!item) return 0;
+                const gap = parseFloat(getComputedStyle(carousel).columnGap) || 0;
+                return item.offsetWidth + gap;
+            }
+
+            function scrollByCards(dir) {
+                carousel.scrollBy({ left: dir * cardStep(), behavior: 'smooth' });
+            }
+
+            function step() {
+                const atEnd = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1;
+                if (atEnd) {
+                    carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    scrollByCards(1);
+                }
+            }
+
+            function start() {
+                if (!autoScroll || timer || hovered || document.hidden || reduceMotion.matches) return;
+                timer = setInterval(step, interval);
+            }
+            function stop() {
+                clearInterval(timer);
+                timer = null;
+            }
+
+            function updateButtons() {
+                if (!prevBtn || !nextBtn) return;
+                const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+                prevBtn.disabled = carousel.scrollLeft <= 1;
+                nextBtn.disabled = carousel.scrollLeft >= maxScroll - 1;
+            }
+
+            prevBtn?.addEventListener('click', () => scrollByCards(-1), { signal });
+            nextBtn?.addEventListener('click', () => scrollByCards(1), { signal });
+            carousel.addEventListener('scroll', updateButtons, { passive: true, signal });
+            window.addEventListener('resize', updateButtons, { signal });
+
+            carousel.addEventListener('mouseenter', () => { hovered = true; stop(); }, { signal });
+            carousel.addEventListener('mouseleave', () => { hovered = false; start(); }, { signal });
+            document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()), { signal });
+            reduceMotion.addEventListener('change', () => (reduceMotion.matches ? stop() : start()), { signal });
+
+            window.__carousels['{{ id }}'] = () => { stop(); controller.abort(); };
+
+            updateButtons();
+            start();
+        })();
+    </script>
+{{ /script_push }}

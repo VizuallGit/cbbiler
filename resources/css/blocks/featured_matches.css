@@ -1,0 +1,77 @@
+.featured_matches{
+    
+    .carousel{
+        --button-size: var(--size-750);
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: calc(22rem - 2px);
+        grid-auto-rows: auto 1fr auto auto auto;
+        gap: 2px;
+        scroll-behavior: smooth;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-marker-group: after;
+        anchor-name: --carousel;
+        margin-block-end: var(--size-900);
+
+
+        @media (width > 48rem) {
+            grid-auto-columns: calc(40cqi - 2px);
+            margin-block-end: 0;
+        }
+
+        @media (width > 64rem) {
+            grid-auto-columns: calc(33.333cqi - 2px);
+        }
+
+        @media (width > 75rem) {
+            grid-auto-columns: calc(25cqi - 2px);
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        &::scroll-button(*) {
+            width: var(--button-size);
+            aspect-ratio: 1/1;
+            border: 0;
+            font-family: var(--font-symbols);
+            font-size: calc(var(--button-size) / 3);
+            cursor: pointer;
+            border-radius: var(--radius-xs);
+            z-index: 99;
+            transition: all 300ms ease;
+            position: absolute;
+            position-anchor: --carousel;
+            background-color: var(--color-primary-glare);
+            color: var(--color-light-glare);
+            transition: all 0.3s ease-in-out;
+        }
+
+        &::scroll-button(*):hover {
+            background-color: var(--color-primary);
+            color: var(--color-light-glare);
+        }
+
+        &::scroll-button(*):disabled {
+            background-color: color-mix(in oklch, var(--color-dark-glare), #ffffff 5%);
+        }
+
+        &::scroll-button(left) {
+            content: '\e900' / 'Scroll left';
+            top: calc(anchor(bottom) + var(--gutter));
+            right: calc(anchor(left) - var(--button-size));
+        }
+
+        &::scroll-button(right) {
+            content: '\e901' / 'Scroll right';
+            top: calc(anchor(bottom)  + var(--gutter));
+            right: calc(anchor(left) - var(--button-size) * 2 - 4px);
+        }
+
+        > li{
+            scroll-snap-align: start;
+        }
+    }
+}

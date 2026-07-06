@@ -1,0 +1,46 @@
+title: Intro
+fields:
+  -
+    handle: text
+    field:
+      buttons:
+        - h1
+        - bold
+        - italic
+        - removeformat
+      toolbar_mode: floating
+      container: assets
+      remove_empty_nodes: false
+      type: bard
+      display: Text
+  - import: links
+  -
+    handle: image
+    field:
+      container: assets
+      max_files: 1
+      type: assets
+      display: 'Foreground Image'
+  -
+    handle: stats
+    field:
+      type: grid
+      display: Stats
+      fields:
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+        -
+          handle: number
+          field:
+            type: text
+            display: Number
+  -
+    handle: bg_image
+    field:
+      container: assets
+      max_files: 1
+      type: assets
+      display: 'background image'
