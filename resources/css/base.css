@@ -200,6 +200,9 @@ transition: background-color 5000s ease-in-out 0s;
 .flow-space-800 {
   --flow-space: var(--size-800);
 }
+.flow-space-850 {
+  --flow-space: var(--size-850);
+}
 .flow-space-900 {
   --flow-space: var(--size-900);
 }

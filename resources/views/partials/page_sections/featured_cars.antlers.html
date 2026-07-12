@@ -1,3 +1,19 @@
-<section>
-    ds
+<section class="wrapper py-lg" id="{{ type }}">
+    <ul class="grid md:grid-cols-3 gap-gutter">
+        {{ collection from="cars" }}
+            <li class="flex flex-col flow-y flow-space-500">
+                <div class="flex items-center justify-center bg-light aspect-4/3 @container">
+                    {{ glide :src="featured_image" width="500" }}
+                        <img width="{{ width }}" height="{{ height }}" class="h-[45cqmin] w-auto max-w-[85cqmin] object-contain" src="{{ url }}" alt="">
+                    {{ /glide }}
+                </div>
+                <h3 class="h4">{{ title }}</h3>
+                <p class="flow-space-05em opacity-70 grow">{{ text }}</p>
+                <div class="flex gap-2 items-end leading-none flow-space-300">
+                    <span class="text-sm opacity-70">Pris</span><strong class="h3 text-600 [text-box:trim-both_cap_alphabetic]">{{ pris }} Kr</strong>
+                </div>
+                 {{ partial:components/btn text="Kontakt mig" class="bg-primary-shade text-light-glare text-sm self-start"  }}
+            </li>
+        {{ /collection }}
+    </ul>
 </section>

@@ -1,0 +1,14 @@
+title: Cta
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: image
+    field:
+      container: assets
+      max_files: 1
+      type: assets
+      display: Image

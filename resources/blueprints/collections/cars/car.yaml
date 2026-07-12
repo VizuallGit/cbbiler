@@ -12,3 +12,20 @@ tabs:
               required: true
               validate:
                 - required
+          -
+            handle: text
+            field:
+              type: textarea
+              display: Text
+          -
+            handle: pris
+            field:
+              type: text
+              display: Pris
+          -
+            handle: featured_image
+            field:
+              container: assets
+              max_files: 1
+              type: assets
+              display: 'Featured image'

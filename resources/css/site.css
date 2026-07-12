@@ -73,10 +73,10 @@
     --spacing-850: calc(var(--size-800) * 1.2);
     --spacing-900: var(--size-900);
     --spacing-950: var(--size-950);
-    --spacing-lg: var(--size-1000);
-    --spacing-xl: var(--size-1100);
-    --spacing-xxl: var(--size-1200);
-    --spacing-huge: var(--size-1300);
+    --spacing-lg: var(--size-lg);
+    --spacing-xl: var(--size-xl);
+    --spacing-xxl: var(--size-xxl);
+    --spacing-huge: var(--size-huge);
     --spacing-container: var(--container-padding);
     --spacing-gutter: var(--gutter);
     --spacing-03em: .3em;

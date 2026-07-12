@@ -1,0 +1,11 @@
+tree:
+  - id: 5bb7c376-35a8-49a5-bf9f-568a200ea847
+    title: Forside
+    url: /
+  - id: 3cd4544c-6721-43b7-a655-4b36d63fa596
+    title: 'Udvalgte biler'
+    url: '#featured_cars'
+  - id: e43d76d9-fdf2-4e02-adab-8507886647f1
+    title: 'Om cbbiler'
+  - id: 8abc3bd9-4232-4817-8423-12cb6f6afcd4
+    title: Anbefalinger

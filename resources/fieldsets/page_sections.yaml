@@ -5,6 +5,7 @@ fields:
     field:
       type: replicator
       display: 'Page sections'
+      collapse: accordion
       sets:
         items:
           display: Items
@@ -25,3 +26,20 @@ fields:
               display: 'Featured cars'
               fields:
                 - import: featured_cars
+            cta:
+              display: CTA
+              fields:
+                - import: cta
+            featured_testimonials:
+              display: 'Featured testimonials'
+              fields:
+                -
+                  handle: number
+                  field:
+                    type: text
+                    display: Number
+                -
+                  handle: text
+                  field:
+                    type: text
+                    display: Text

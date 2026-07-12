@@ -1,0 +1,19 @@
+<section class="wrapper py-lg flex flwx-wrap gap-gutter bg-light">
+    <div class="flex flex-col leading-flat grow basis-[12rem]">
+        <b class="h1 text-950">{{ number }}</b>
+        <b class="font-heading text-400">{{ text }}</b>
+    </div>
+    <ul class="grid md:grid-cols-3 gap-gutter grow-999 min-w-[65%] basis-0">
+        {{ collection from="testimonials" limit="3" sort="random" }}
+            <li class="bg-light-shade p-500 flow-y">
+                <h3 class="text-400 normal-case">{{ name }}</h3>
+                <p class="text-sm opacity-70 leading-tight">{{ text }}</p>
+                <div class="flex gap-px">
+                    {{ loop :times="stars" }}
+                        {{ svg src="star" class="h-200 w-auto text-primary-shade" }}
+                    {{ /loop }}
+                </div>
+            </li>
+        {{ /collection }}
+    </ul>
+</section>

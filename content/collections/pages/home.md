@@ -25,7 +25,7 @@ page_sections:
       - id: 5V1gSbZJNOcJl_rSzO-Bk
         url: /
         text: 'Se vores biler'
-    image: bjarne-nielsen_le_upscale_prime_x2_light_ai_30_remove_background_general_clip_to_object_off-2.png
+    image: bjarne-nielsen_le_upscale_prime_x2_light_ai_30_remove_background_general_clip_to_object_off-2.webp
     type: intro
     enabled: true
     stats:
@@ -125,7 +125,7 @@ page_sections:
         type: paragraph
         content:
           - type: text
-            text: 'Hos CB Biler finder du et nøje udvalgt udvalg af velholdte brugte biler. Jeg håndplukker selv alle biler og lægger vægt på kvalitet, driftssikkerhed og en ordentlig historik, så du kan føle dig tryg, når du handler. Jeg tror ikke på, at et stort udvalg er det vigtigste. Til gengæld tror jeg på, at de biler, jeg tilbyder, skal være biler, jeg selv kan stå inde for. Derfor varierer udvalget løbende, men fælles for alle biler er, at de er udvalgt med fokus på kvalitet og en god samlet oplevelse.'
+            text: 'Hos CB Biler finder du et nøje udvalgt udvalg af velholdte brugte biler. Jeg håndplukker selv alle biler og lægger vægt på kvalitet, driftssikkerhed og en ordentlig historik, så du kan føle dig tryg, når du handler. Jeg tror ikke på, at et stort udvalg er det vigtigste. Til gengæld tror jeg på, at de biler, jeg tilbyder, skal være biler, jeg selv kan stå inde for.'
     type: seo_text
     enabled: true
   -
@@ -135,6 +135,16 @@ page_sections:
       - 169389b7-a3b6-4f4a-876b-cd9c297e8824
     type: featured_cars
     enabled: true
+  - id: '-L8esxUGi8D8CZBopODNX'
+    number: 94%
+    text: 'Gennemsnitlig kundetilfredshed'
+    type: featured_testimonials
+    enabled: true
+  - id: _XJpymcdO4qRc6X8m3nCS
+    title: 'Har du nogle spørgsmål eller ønsker?'
+    image: bjarne-nielsen_le_upscale_prime_x2_light_ai_30_remove_background_general_clip_to_object_off-2.webp
+    type: cta
+    enabled: true
 updated_by: 4df4b14e-e243-4fe9-abea-451d8cbfd523
-updated_at: 1783369838
+updated_at: 1783784457
 ---

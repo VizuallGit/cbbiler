@@ -8,8 +8,10 @@
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
     </head>
     <body class="bg-light-glare text-dark font-base">
+        {{ partial:site_head }}
         <main class="">
             {{ template_content }}
         </main>
+        {{ partial:site_foot }}
     </body>
 </html>

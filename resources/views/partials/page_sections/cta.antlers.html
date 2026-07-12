@@ -1,0 +1,12 @@
+<section class="wrapper bg-primary-shade text-light-glare grid md:grid-cols-[.5fr_1fr] gap-x-lg">
+    <div class="relative hidden md:block">
+        {{ glide :src="image" width="400" }}
+            <img class="h-[calc(100%+var(--size-900))] w-full object-cover absolute object-top -translate-y-900" src="{{ url }}" width="{{ width }}" height="{{ height }}" alt="">
+        {{ /glide }}
+    </div>
+    <div class="py-lg flow-y flow-space-05em">
+        <h2 class=" font-base text-700 font-light normal-case">{{ title }}</h2>
+        <div class="flex flex-wrap gap-x-400 items-center"><span class="h1">Kontakt mig her</span><a class="btn bg-dark text-300 py-[.8em] grow" href="tel:{{ site_settings.phone }}">{{ svg src="phone" }}<span>{{ site_settings.phone }}</span></a></div>
+        <p class="text-sm text-current/80 leading-tight">Eller send os en mail på <a class="underline underline-offset-4 text-light-glare" href="mailto:{{ site_settings.email }}">{{ site_settings.email }}</a> og vi vil vende tilbage til dig hurtigst muligt.</p>
+    </div>
+</section>

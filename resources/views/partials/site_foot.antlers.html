@@ -1,0 +1,23 @@
+<footer class="wrapper py-lg bg-dark text-light-glare grid md:grid-cols-4 gap-x-900">
+    <div class="flow-y flow-space-100">
+        <p class="h4">Kontakt info</p>
+        <ul>
+            <li>{{ site_settings.site_name }}</li>
+            <li>{{ site_settings.address }}</li>
+            <li><span>Email </span><a href="mailto:{{ site_settings.email }}">{{ site_settings.email }}</a></li>
+            <li><span>Telefon: </span><a href="tel:{{ site_settings.phone }}">{{ site_settings.phone }}</a></li>
+        </ul>
+    </div>
+    <div class="flow-y flow-space-100">
+        <p class="h4">Nyttige links</p>
+        <ul>
+            {{ nav:main_nav }}
+                <li><a href="">{{ title }}</a></li>
+            {{ /nav:main_nav }}
+        </ul>
+    </div>
+        <div class="flow-y flow-space-100">
+        <p class="h4">??</p>
+       
+    </div>
+</footer>

@@ -2,7 +2,7 @@
 
 :root {
   --gutter: var(--size-700);
-  --container-width: 82.5rem;
+  --container-width: 77.5rem;
   --container-width-narrow: 45rem;
   --container-padding: calc((100vw - var(--container-width)) / 2);
 
@@ -84,8 +84,8 @@
   --size-850: calc(var(--size-800) * 1.2);
   --size-900: calc(((var(--fc-xl-min) / 16) * 1rem) + (var(--fc-2xl-max) - var(--fc-xl-min)) * var(--fluid-bp));
   --size-950: calc(var(--size-900) * 1.15);
-  --size-1000: calc(((var(--fc-2xl-min) / 16) * 1rem) + (var(--fc-3xl-max) - var(--fc-2xl-min)) * var(--fluid-bp));
-  --size-1100: calc(((var(--fc-2xl-min) / 16) * 1rem) + (var(--fc-4xl-max) - var(--fc-2xl-min)) * var(--fluid-bp));
-  --size-1200: calc(var(--size-1100) * 1.4);
-  --size-1300: calc(var(--size-1200) * 1.9);
+  --size-lg: calc(((var(--fc-2xl-min) / 16) * 1rem) + (var(--fc-3xl-max) - var(--fc-2xl-min)) * var(--fluid-bp));
+  --size-xl: calc(((var(--fc-2xl-min) / 16) * 1rem) + (var(--fc-4xl-max) - var(--fc-2xl-min)) * var(--fluid-bp));
+  --size-xxl: calc(var(--size-xl) * 1.4);
+  --size-huge: calc(var(--size-xxl) * 1.9);
 }
