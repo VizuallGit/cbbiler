@@ -43,3 +43,7 @@ fields:
                   field:
                     type: text
                     display: Text
+            image_textbox:
+              display: 'Image textbox'
+              fields:
+                - import: image_textbox

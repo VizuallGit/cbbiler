@@ -135,6 +135,40 @@ page_sections:
       - 169389b7-a3b6-4f4a-876b-cd9c297e8824
     type: featured_cars
     enabled: true
+  -
+    id: 8kZj1bP8jT7Cxe3X9wdeg
+    text:
+      -
+        type: heading
+        attrs:
+          level: 2
+        content:
+          - type: text
+            text: 'Om CB Biler'
+      -
+        type: paragraph
+        content:
+          - type: text
+            text: 'Jeg startede CB Biler med en ambition om at gøre bilhandel lidt mere personlig. Her møder du ikke en stor bilkæde eller en sælger med et salgsmål – du møder mig.'
+      -
+        type: paragraph
+        content:
+          - type: text
+            text: 'Jeg udvælger selv alle biler og går op i, at de er velholdte, præsentable og til at stå inde for. Jeg tror på ærlighed, ordentlighed og en god dialog, fordi en bilhandel skal være en tryg oplevelse fra start til slut.'
+      -
+        type: paragraph
+        content:
+          - type: text
+            text: 'Hos CB Biler handler det ikke om at sælge flest biler – men om at hjælpe dig med at finde den bil, der passer bedst til dine behov. Det er den tilgang, jeg har bygget virksomheden på.'
+      -
+        type: paragraph
+        content:
+          - type: text
+            text: '– Carsten Bach'
+    image: istock-1135359711-3.jpg
+    flip_content: false
+    type: image_textbox
+    enabled: true
   - id: '-L8esxUGi8D8CZBopODNX'
     number: 94%
     text: 'Gennemsnitlig kundetilfredshed'
@@ -146,5 +180,5 @@ page_sections:
     type: cta
     enabled: true
 updated_by: 4df4b14e-e243-4fe9-abea-451d8cbfd523
-updated_at: 1783784457
+updated_at: 1783870875
 ---
