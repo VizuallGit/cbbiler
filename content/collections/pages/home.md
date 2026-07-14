@@ -25,16 +25,8 @@ page_sections:
       - id: 5V1gSbZJNOcJl_rSzO-Bk
         url: /
         text: 'Se vores biler'
-    image: bjarne-nielsen_le_upscale_prime_x2_light_ai_30_remove_background_general_clip_to_object_off-2.webp
     type: intro
     enabled: true
-    stats:
-      - id: bzbfw2G_lZtqoWijVTZfJ
-        title: 'Biler til salg'
-        number: '+12'
-      - id: 5rLdITiZ3yTAK3782ULyk
-        title: 'Solgt biler i alt'
-        number: '+35'
     bg_image: istock-1135359711-3.jpg
   -
     id: jQ4ODzZ3X9_si_lDzQjIy
@@ -173,12 +165,12 @@ page_sections:
     number: 94%
     text: 'Gennemsnitlig kundetilfredshed'
     type: featured_testimonials
-    enabled: true
+    enabled: false
   - id: _XJpymcdO4qRc6X8m3nCS
     title: 'Har du nogle spørgsmål eller ønsker?'
     image: bjarne-nielsen_le_upscale_prime_x2_light_ai_30_remove_background_general_clip_to_object_off-2.webp
     type: cta
-    enabled: true
+    enabled: false
 updated_by: 4df4b14e-e243-4fe9-abea-451d8cbfd523
-updated_at: 1783870875
+updated_at: 1784027712
 ---

@@ -24,9 +24,9 @@
     --color-light-glare: #F8F8F8;
     --color-light: #EFEFEF;
     --color-light-shade: #E6E6E6;
-    --color-dark-glare: #27375B;
-    --color-dark: #14213D;
-    --color-dark-shade: #0C1528;
+    --color-dark-glare: #414141;
+    --color-dark: #292929;
+    --color-dark-shade: #1A1A1A;
     --color-black: #000000;
 
     --text-*: initial;
