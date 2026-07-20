@@ -1,19 +1,36 @@
-<header class="flex flex-col absolute z-50 w-full">
+<header class="flex flex-col absolute z-50 w-full" x-data="{ open: false }" @keydown.escape.window="open = false">
      <div class="h-700">
-          
+
      </div>
      <div class="wrapper ">
           <div class="flex justify-end h-950 bg-light rounded-sm relative">
-               <a class="absolute left-gutter -translate-y-700 bg-dark text-light-glare aspect-5/4 border-b-8 border-b-light rounded-b-sm h-[calc(var(--size-700)+var(--size-950)+var(--size-400))] shadow-2xl shadow-black/70 flex items-center justify-center" href="/" aria-label="Gå til forsiden">{{ svg src="logo" class="h-[40%] w-auto" }}</a>
-               <nav class="ml-[15rem]">
+               <a class="absolute left-gutter -translate-y-700 bg-black text-light-glare aspect-5/4 border-b-8 border-b-light rounded-b-sm h-[calc(var(--size-700)+var(--size-950)+var(--size-400))] shadow-2xl shadow-black/70 flex items-center justify-center z-50" href="/" aria-label="Gå til forsiden">{{ svg src="logo" class="h-[40%] w-auto" }}</a>
+               <nav class="ml-[15rem] hidden md:block">
                     <menu class="flex items-center gap-[1.8em] font-semibold">
                          {{ nav:main_nav }}
                               <li><a href="{{ url }}">{{ title }}</a></li>
                          {{ /nav:main_nav }}
-                         <li><a class="bg-dark h-950 flex items-center px-2em text-light-glare" href="">Kontakt</a></li>
+                         <li><a class="bg-dark-glare h-950 flex items-center px-2em text-light-glare" href="#foot">Kontakt</a></li>
                     </menu>
                </nav>
+               <button type="button" class="md:hidden relative z-50 bg-dark-glare text-light-glare h-950 aspect-square flex items-center justify-center" @click="open = !open" :aria-expanded="open" aria-controls="mobile_nav">
+                    <span class="sr-only" x-text="open ? 'Luk menu' : 'Åbn menu'">Åbn menu</span>
+                    <span class="relative block w-6 h-3.5" aria-hidden="true">
+                         <span class="absolute inset-x-0 top-0 h-0.5 bg-current transition duration-300" :class="{ 'translate-y-1.5 rotate-45': open }"></span>
+                         <span class="absolute inset-x-0 top-1/2 -translate-y-1/2 h-0.5 bg-current transition duration-300" :class="{ 'opacity-0': open }"></span>
+                         <span class="absolute inset-x-0 bottom-0 h-0.5 bg-current transition duration-300" :class="{ '-translate-y-1.5 -rotate-45': open }"></span>
+                    </span>
+               </button>
           </div>
-          
+
      </div>
+
+     <nav id="mobile_nav" x-cloak x-show="open" x-transition.opacity aria-label="Mobilmenu" class="md:hidden fixed inset-0 z-40 bg-dark pt-huge text-light-glare flex flex-col wrapper">
+          <menu class="flow-y flow-space-500 font-heading text-700 font-bold uppercase leading-flat">
+               {{ nav:main_nav }}
+                    <li><a href="{{ url }}" @click="open = false">{{ title }}</a></li>
+               {{ /nav:main_nav }}
+               <li><a href="#foot" @click="open = false">Kontakt</a></li>
+          </menu>
+     </nav>
 </header>

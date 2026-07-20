@@ -20,14 +20,12 @@ page_sections:
             text: 'Jeg startede CB Biler med en ambition om at gøre bilhandel lidt mere personlig. Her møder du ikke en stor bilkæde eller en sælger med et salgsmål – du møder mig.'
     links:
       - id: 7uZsb9j2Q6G4rpbIUcPUd
-        url: /
+        url: '#foot'
         text: 'Kontakt os'
-      - id: 5V1gSbZJNOcJl_rSzO-Bk
-        url: /
-        text: 'Se vores biler'
     type: intro
     enabled: true
     bg_image: istock-1135359711-3.jpg
+    image: f7aa19c1-be8a-4ebf-a33a-eef182313c50.png
   -
     id: jQ4ODzZ3X9_si_lDzQjIy
     type: benefits
@@ -172,5 +170,5 @@ page_sections:
     type: cta
     enabled: false
 updated_by: 4df4b14e-e243-4fe9-abea-451d8cbfd523
-updated_at: 1784027712
+updated_at: 1784555405
 ---

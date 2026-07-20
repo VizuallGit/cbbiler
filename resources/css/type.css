@@ -1,18 +1,11 @@
 @font-face {
   font-family: "Rajdhani";
-  src: url("/public/fonts/Rajdhani-Bold.woff2") format("woff2");
-  font-weight: 700;
+  src: url("/public/fonts/Orbitron-wght.woff2") format("woff2-variations");
+  font-weight: 300 700;
   font-style: normal;
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Rajdhani";
-  src: url("/public/fonts/Rajdhani-SemiBold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
 
 
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
@@ -21,39 +14,40 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
   line-height: 1.1;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: -.01em;
 }
   
 h1,
 .h1 {
-  font-size: var(--size-850);
+  font-size: var(--size-750);
   max-width: 30ch;
 }
 
 h2,
 .h2 {
-  font-size: var(--size-700);
+  font-size: var(--size-600);
   max-width: 40ch;
 }
 
 h3,
 .h3 {
-  font-size: var(--size-550);
+  font-size: var(--size-450);
   max-width: 55ch;
 }
 
 h4,
 .h4 {
-  font-size: var(--size-450);
+  font-size: var(--size-350);
 }
 
 h5,
 .h5 {
-  font-size: var(--size-300);
+  font-size: var(--size-200);
 }
 
 h6,
 .h6 {
-  font-size: var(--size-200);
+  font-size: var(--size-100);
 }
 
 p{

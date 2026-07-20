@@ -1,5 +1,5 @@
-<section class="bg-linear-90 from-dark to-dark-glare bg-cover bg-center text-light-glare"{{ if bg_image }} style="background-image: linear-gradient(90deg, var(--color-dark), color-mix(in oklab, var(--color-dark) 80%, transparent), color-mix(in oklab, var(--color-dark) 20%, transparent)), url('{{ glide:bg_image width='1600' format='webp' quality='50' }}')"{{ /if }}>
-    <div class="wrapper">
+<section class="bg-linear-90 from-dark to-dark-glare bg-cover bg-center text-light-glare relative">
+    <div class="wrapper relative z-10">
         <div class="flow-y pt-[calc(var(--size-700)+var(--size-950)+var(--size-200)+var(--size-lg))] pb-lg prose-p:opacity-70 prose-p:text-300 prose-p:max-w-[60ch]">
             {{ text }}
             {{ partial:components/btn_group space="flow-space-700" }}
@@ -17,12 +17,21 @@
                 </ul>
             {{ endif }}
         </div>
-        {{# <div class="">
-            {{ glide :src="image" width="500" format="webp" quality="70" }}
-                <img class="w-auto h-full object-cover" src="{{ url }}" width="{{ width }}" height="{{ height }}">
-            {{ /glide }}
-        </div> #}}
+        {{ if image }}
+            <div class="absolute bottom-0 right-0 w-[70%] max-w-[55rem] h-auto translate-y-[31%] hidden lg:block">
+                {{ glide :src="image" width="1400" format="webp" quality="80" }}
+                    <img class="w-auto h-full object-cover" src="{{ url }}" width="{{ width }}" height="{{ height }}">
+                {{ /glide }}
+            </div>
+        {{ endif }}
     </div>
+    {{ if bg_image }}
+        <div class=" absolute inset-0 after:absolute after:inset-0 after:bg-linear-90 after:from-dark-shade/90 lg:after:from-dark-shade after:via-dark-shade/50 lg:after:via-dark-shade/80 after:to-dark-shade/20 lg:after:to-dark-shade">
+            {{ partial:components/image :imagePath="bg_image" w="1200" h="700" q='50' class="w-full h-full object-cover"  }}
+        </div>
+        
+    {{ endif }}
+
 </section>
 
 

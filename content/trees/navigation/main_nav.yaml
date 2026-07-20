@@ -7,5 +7,4 @@ tree:
     url: '#featured_cars'
   - id: e43d76d9-fdf2-4e02-adab-8507886647f1
     title: 'Om cbbiler'
-  - id: 8abc3bd9-4232-4817-8423-12cb6f6afcd4
-    title: Anbefalinger
+    url: '#about'
