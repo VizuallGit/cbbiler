@@ -3,8 +3,8 @@
         <p class="h4">Kontakt info</p>
         <ul>
             <li>{{ site_settings.address }}</li>
-            <li><span>Email </span><a href="mailto:{{ site_settings.email }}">{{ site_settings.email }}</a></li>
-            <li><span>Telefon: </span><a href="tel:{{ site_settings.phone }}">{{ site_settings.phone }}</a></li>
+            {{ if site_settings.email }}<li><span>Email </span><a href="mailto:{{ site_settings.email }}">{{ site_settings.email }}</a></li>{{ endif }}
+            {{ if site_settings.phone }}<li><span>Telefon: </span><a href="tel:{{ site_settings.phone }}">{{ site_settings.phone }}</a></li>{{ endif }}
         </ul>
     </div>
 </footer>
