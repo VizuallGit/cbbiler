@@ -115,7 +115,17 @@ page_sections:
         type: paragraph
         content:
           - type: text
-            text: 'Hos CB Biler finder du et nøje udvalgt udvalg af velholdte brugte biler. Jeg håndplukker selv alle biler og lægger vægt på kvalitet, driftssikkerhed og en ordentlig historik, så du kan føle dig tryg, når du handler. Jeg tror ikke på, at et stort udvalg er det vigtigste. Til gengæld tror jeg på, at de biler, jeg tilbyder, skal være biler, jeg selv kan stå inde for.'
+            text: 'Hos CBBiler finder du et nøje udvalgt udvalg af velholdte brugte biler. Jeg håndplukker selv alle biler og lægger vægt på kvalitet, driftssikkerhed og en ordentlig historik, så du kan føle dig tryg, når du handler.'
+      -
+        type: paragraph
+        content:
+          - type: text
+            text: 'Jeg tror ikke på, at et stort udvalg er det vigtigste. Til gengæld tror jeg på, at de biler, jeg tilbyder, skal være biler, jeg selv kan stå inde for. Derfor varierer udvalget løbende, men fælles for alle biler er, at de er udvalgt med fokus på kvalitet og en god samlet oplevelse.'
+      -
+        type: paragraph
+        content:
+          - type: text
+            text: 'Tag et kig på de biler, der er på lager netop nu. Har du spørgsmål eller ønsker du at se en bil, er du altid velkommen til at kontakte mig – jeg hjælper gerne med at finde den bil, der passer bedst til dine behov.'
     type: seo_text
     enabled: true
   -
@@ -134,7 +144,7 @@ page_sections:
           level: 2
         content:
           - type: text
-            text: 'Om CB Biler'
+            text: 'Om CBBiler'
       -
         type: paragraph
         content:
@@ -153,7 +163,10 @@ page_sections:
       -
         type: paragraph
         content:
-          - type: text
+          -
+            type: text
+            marks:
+              - type: bold
             text: '– Carsten Bach'
     image: istock-1135359711-3.jpg
     flip_content: false
@@ -170,5 +183,5 @@ page_sections:
     type: cta
     enabled: false
 updated_by: 4df4b14e-e243-4fe9-abea-451d8cbfd523
-updated_at: 1784555405
+updated_at: 1784637666
 ---
