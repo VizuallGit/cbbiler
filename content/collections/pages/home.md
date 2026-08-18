@@ -12,20 +12,20 @@ page_sections:
           level: 1
         content:
           - type: text
-            text: 'CB Biler – Din  bilhandel med fokus på kvalitet'
+            text: 'CBBiler – Din  bilhandel med fokus på kvalitet'
       -
         type: paragraph
         content:
           - type: text
-            text: 'Jeg startede CB Biler med en ambition om at gøre bilhandel lidt mere personlig. Her møder du ikke en stor bilkæde eller en sælger med et salgsmål – du møder mig.'
+            text: 'Jeg startede CBBiler med en ambition om at gøre bilhandel lidt mere personlig. Her møder du ikke en stor bilkæde eller en sælger med et salgsmål – du møder mig.'
     links:
       - id: 7uZsb9j2Q6G4rpbIUcPUd
         url: '#foot'
         text: 'Kontakt os'
     type: intro
     enabled: true
-    bg_image: istock-1135359711-3.jpg
-    image: f7aa19c1-be8a-4ebf-a33a-eef182313c50.png
+    bg_image: fedebiler_cbbiler.jpeg
+    image: porsche-ai-fritlagt.png
   -
     id: jQ4ODzZ3X9_si_lDzQjIy
     type: benefits
@@ -37,7 +37,7 @@ page_sections:
           level: 2
         content:
           - type: text
-            text: 'Hvorfor skal du vælge CB Biler til dit næste bilkøb?'
+            text: 'Hvorfor skal du vælge CBBiler til dit næste bilkøb?'
     list:
       -
         id: tosggdcsFd1rG8aBip-N2
@@ -149,7 +149,7 @@ page_sections:
         type: paragraph
         content:
           - type: text
-            text: 'Jeg startede CB Biler med en ambition om at gøre bilhandel lidt mere personlig. Her møder du ikke en stor bilkæde eller en sælger med et salgsmål – du møder mig.'
+            text: 'Jeg startede CBBiler med en ambition om at gøre bilhandel lidt mere personlig. Her møder du ikke en stor bilkæde eller en sælger med et salgsmål – du møder mig.'
       -
         type: paragraph
         content:
@@ -159,7 +159,7 @@ page_sections:
         type: paragraph
         content:
           - type: text
-            text: 'Hos CB Biler handler det ikke om at sælge flest biler – men om at hjælpe dig med at finde den bil, der passer bedst til dine behov. Det er den tilgang, jeg har bygget virksomheden på.'
+            text: 'Hos CBBiler handler det ikke om at sælge flest biler – men om at hjælpe dig med at finde den bil, der passer bedst til dine behov. Det er den tilgang, jeg har bygget virksomheden på.'
       -
         type: paragraph
         content:
@@ -168,10 +168,10 @@ page_sections:
             marks:
               - type: bold
             text: '– Carsten Bach'
-    image: istock-1135359711-3.jpg
     flip_content: false
     type: image_textbox
     enabled: true
+    image: cb-biler-logo-2.png
   - id: '-L8esxUGi8D8CZBopODNX'
     number: 94%
     text: 'Gennemsnitlig kundetilfredshed'
@@ -179,9 +179,8 @@ page_sections:
     enabled: false
   - id: _XJpymcdO4qRc6X8m3nCS
     title: 'Har du nogle spørgsmål eller ønsker?'
-    image: bjarne-nielsen_le_upscale_prime_x2_light_ai_30_remove_background_general_clip_to_object_off-2.webp
     type: cta
     enabled: false
 updated_by: 4df4b14e-e243-4fe9-abea-451d8cbfd523
-updated_at: 1784637666
+updated_at: 1787038747
 ---
