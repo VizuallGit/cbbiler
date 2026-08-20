@@ -1,18 +1,95 @@
 <section class="wrapper py-lg" id="{{ type }}">
     <ul class="grid md:grid-cols-3 gap-gutter">
         {{ collection from="cars" }}
-            <li class="flex flex-col flow-y flow-space-500">
-                <div class="flex items-center justify-center bg-light aspect-4/3 @container">
-                    {{ glide :src="featured_image" width="500" }}
-                        <img width="{{ width }}" height="{{ height }}" class="w-full h-full object-cover" src="{{ url }}" alt="">
-                    {{ /glide }}
-                </div>
+            <li
+                class="flex flex-col flow-y flow-space-500"
+                x-data="{ open: false, i: 0, total: {{ featured_image | length }} }"
+                x-effect="document.body.classList.toggle('overflow-hidden', open)"
+                @keydown.escape.window="open = false"
+                @keydown.left.window="if (open && total > 1) i = (i - 1 + total) % total"
+                @keydown.right.window="if (open && total > 1) i = (i + 1) % total"
+            >
+                <button
+                    type="button"
+                    class="flex items-center justify-center bg-light aspect-4/3 @container cursor-zoom-in w-full p-0 border-0 text-left"
+                    @click="open = true; i = 0"
+                    aria-label="Se billeder af {{ title | sanitize }}"
+                >
+                    {{ featured_image limit="1" }}
+                        {{ glide :src="path" width="500" }}
+                            <img width="{{ width }}" height="{{ height }}" class="w-full h-full object-cover" src="{{ url }}" alt="">
+                        {{ /glide }}
+                    {{ /featured_image }}
+                </button>
                 <h3 class="h5">{{ title }}</h3>
                 <p class="flow-space-05em opacity-70 grow">{{ text }}</p>
                 <div class="flex gap-2 items-end leading-none flow-space-300">
                     <strong class="h3 text-500 [text-box:trim-both_cap_alphabetic]">{{ pris }}</strong>
                 </div>
-                 {{ partial:components/btn text="Kontakt mig" url="#foot" class="bg-dark text-light-glare text-sm self-start" }}
+                {{ partial:components/btn text="Kontakt mig" url="#foot" class="bg-dark text-light-glare text-sm self-start" }}
+
+                <div
+                    x-show="open"
+                    x-cloak
+                    x-transition.opacity.duration.200ms
+                    class="fixed inset-0 z-50 flex items-center justify-center bg-dark-shade/90 p-4 md:p-8"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-label="Billedgalleri for {{ title | sanitize }}"
+                    @click.self="open = false"
+                >
+                    <button
+                        type="button"
+                        class="absolute top-4 right-4 md:top-6 md:right-6 text-light-glare text-sm font-semibold tracking-wide uppercase opacity-80 hover:opacity-100"
+                        @click="open = false"
+                    >
+                        Luk
+                    </button>
+
+                    <div class="relative w-full max-w-5xl flex items-center justify-center">
+                        {{ if {featured_image | length} > 1 }}
+                            <button
+                                type="button"
+                                class="absolute left-0 md:-left-16 z-10 text-light-glare text-7xl md:text-8xl leading-none px-2 py-4 opacity-90 hover:opacity-100"
+                                @click.stop="i = (i - 1 + total) % total"
+                                aria-label="Forrige billede"
+                            >
+                                ‹
+                            </button>
+                            <button
+                                type="button"
+                                class="absolute right-0 md:-right-16 z-10 text-light-glare text-7xl md:text-8xl leading-none px-2 py-4 opacity-90 hover:opacity-100"
+                                @click.stop="i = (i + 1) % total"
+                                aria-label="Næste billede"
+                            >
+                                ›
+                            </button>
+                        {{ /if }}
+
+                        <div class="w-full flex items-center justify-center">
+                            {{ featured_image }}
+                                <figure
+                                    x-show="i === {{ index | subtract:1 }}"
+                                    class="m-0 flex items-center justify-center"
+                                >
+                                    {{ glide :src="path" width="1600" quality="85" }}
+                                        <img
+                                            class="max-h-[85vh] w-auto max-w-full object-contain"
+                                            src="{{ url }}"
+                                            width="{{ width }}"
+                                            height="{{ height }}"
+                                            alt=""
+                                        >
+                                    {{ /glide }}
+                                </figure>
+                            {{ /featured_image }}
+                        </div>
+                    </div>
+
+                    {{ if {featured_image | length} > 1 }}
+                        <p class="absolute bottom-4 left-1/2 -translate-x-1/2 text-light-glare text-sm opacity-70" x-text="(i + 1) + ' / ' + total"></p>
+                    {{ /if }}
+                </div>
             </li>
         {{ /collection }}
     </ul>

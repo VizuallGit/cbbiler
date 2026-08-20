@@ -26,6 +26,7 @@ tabs:
             handle: featured_image
             field:
               container: assets
-              max_files: 1
               type: assets
-              display: 'Featured image'
+              display: Billeder
+              mode: grid
+              reorderable: true
