@@ -50,19 +50,23 @@
                         {{ if {featured_image | length} > 1 }}
                             <button
                                 type="button"
-                                class="absolute left-0 md:-left-16 z-10 text-light-glare text-7xl md:text-8xl leading-none px-2 py-4 opacity-90 hover:opacity-100"
+                                class="absolute left-0 md:-left-20 z-10 flex items-center justify-center size-16 md:size-20 text-light-glare opacity-90 hover:opacity-100"
                                 @click.stop="i = (i - 1 + total) % total"
                                 aria-label="Forrige billede"
                             >
-                                ‹
+                                <svg class="size-12 md:size-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                                </svg>
                             </button>
                             <button
                                 type="button"
-                                class="absolute right-0 md:-right-16 z-10 text-light-glare text-7xl md:text-8xl leading-none px-2 py-4 opacity-90 hover:opacity-100"
+                                class="absolute right-0 md:-right-20 z-10 flex items-center justify-center size-16 md:size-20 text-light-glare opacity-90 hover:opacity-100"
                                 @click.stop="i = (i + 1) % total"
                                 aria-label="Næste billede"
                             >
-                                ›
+                                <svg class="size-12 md:size-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
                             </button>
                         {{ /if }}
 
