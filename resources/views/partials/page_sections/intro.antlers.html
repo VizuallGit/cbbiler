@@ -18,9 +18,9 @@
             {{ endif }}
         </div>
         {{ if image }}
-            <div class="absolute bottom-0 right-0 w-[70%] max-w-[55rem] h-auto translate-y-[31%] hidden lg:block">
+            <div class="absolute bottom-0 right-0 w-[70%] max-w-[55rem] translate-y-[31%] hidden lg:block">
                 {{ glide :src="image" width="1400" format="webp" quality="80" }}
-                    <img class="w-auto h-full object-cover" src="{{ url }}" width="{{ width }}" height="{{ height }}">
+                    <img class="w-full h-auto" src="{{ url }}" width="{{ width }}" height="{{ height }}" alt="">
                 {{ /glide }}
             </div>
         {{ endif }}
